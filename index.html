@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="factory.js" />
+
+</head>
+<body>
+	<div ng-controller ="myCal">
+		Number1<input type="text" ng-model= "n1">
+		Number2<input type="text" ng-model= "n2">
+		<h1> Sum {{sum}}</h1>
+		<button ng-click= "addValues()" >Add</button>
+	</div>
+</body>
+</html>
