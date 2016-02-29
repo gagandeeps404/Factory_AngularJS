@@ -1,55 +1,60 @@
 (function(){
    "use strict";
-    var app = angular.module("myApp", []);
-    app.factory("myCal",function(){
-
-      return{
-          addValues:addValues
-          // subtractValues:subtractValues
-          // multiplyValues:multiplyValues
-          // divideValues:divideValues
-      };
-    
-   function calculator(){
-
-       function addValues(n1,n2){
-           return parseInt(n1) + parseInt(n2);
+    var app = angular.module("myApp");
+    app.factory("calculator", function(){
+        function addValues(a,b){
+           return parseInt(a) + parseInt(b);
        }
-     }
-       // function subtractValues(n1,n2){
-       //  if(n1>n2){
-       //    return parseInt(n1) - parseInt(n2);
-       //  }
-       //  else 
-       //    return parseInt(n2) - parseInt(n1);
-       // }
+       function subtractValues(a,b){
+        return parseInt(a) - parseInt(b);
+       }
+       function multiplyValues(a,b){
+        return parseInt(a) * parseInt(b);
+       }
+       function divideValues(a,b){
+        return parseInt(a) / parseInt(b);
+       }
+       return{
+           addValues:addValues,
+           subtractValues:subtractValues,
+           multiplyValues:multiplyValues,
+           divideValues:divideValues
+           }
 
-       // function multiplyValues(n1, n2){
-       //  return parseInt(n1) * parseInt(n2);
-       // }
+     
+     });
 
-       // function divideValues(n1,n2){
-       //  return parseInt(n1) / parseInt(n2);
-       // }
+}());
+
+/* app.factory('calculator' , function(){
+  var factory={};
+  factory.addValues=function(a,b){
+  return parseInt(a) + parseInt(b);
+  }
+
+  factory.subtractValues=function(a,b){
+  return parseInt(a) - parseInt(b);
+  }
+
+  return factory;
+
+});
+*/
+
+
+       
 
        
 
       
 
-          /*addValues : function(a,b){
-             return parseInt(a) + parseInt(b);
-
-          }*/
+          
          
 
 
       
 
-   });
-
-}());
-
-
+   
 
 
 

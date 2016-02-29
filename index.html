@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html >
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+	
+	</script>
 	<script src="app.js"></script>
 	<script src="controller.js"></script>
-	<script src="factory.js" />
+	<script src="factory.js" ></script>
 
 </head>
-<body>
+<body ng-app="myApp">
 	<div ng-controller ="myCal">
 		Number1<input type="text" ng-model= "n1">
 		Number2<input type="text" ng-model= "n2">
-		<h1> Sum {{sum}}</h1>
-		<button ng-click= "addValues()" >Add</button>
+		<h1> Result={{result}}</h1>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary" ng-click="addValues()">Add</button>
+			<button type="button" class="btn btn-primary" ng-click="subtractValues()">Subtract</button>
+			<button type="button" class="btn btn-primary" ng-click="multiply()">Multiply</button>
+			<button type="button" class="btn btn-primary" ng-click="divide()">Divide</button>
+		</div>
+		
 	</div>
 </body>
 </html>
